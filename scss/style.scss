@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+%icon-before {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+}
+
+body {
+    .wrap-container {
+        outline: 1px solid green;
+        max-width: 1920px;
+        height: 100vmax;
+        margin: 0 auto;
+        header {
+            width: 100%;
+            .header-container {
+                max-width: 1116px;
+                height: 110px;
+                // outline: 1px solid red;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                .logo {
+                    img {
+                        padding-left: 12px;
+                    }
+                    span {
+                        font-family: 'Merriweather';
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 36px;
+                        line-height: 50px;
+                        color: #005FA3;
+                        padding-left: 24px;
+                    }
+                }
+                .info {
+                    margin-left: auto;
+                    display: flex;
+                    flex-direction: column;
+                    height: 70%;
+                    justify-content: space-evenly;
+                    .top-info {
+                        // outline: 1px solid springgreen;
+                        ul {
+                            display: flex;
+                            padding-left: 0;
+                            width: 665px;
+                            justify-content: space-between;
+                            li{
+                                vertical-align: middle;
+                                list-style: none;
+                                font-family: 'Lato', sans-serif;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 13px;
+                                line-height: 17px;
+                                color: #000000;
+
+                                span {
+                                    padding-left: 8px;
+                                }
+                            }
+                            .info-li1::before {
+                                content: "";
+                                background-image: url(../assets/icons/phone.png);
+                                width: 10px;
+                                @extend %icon-before;
+                            }
+                            .info-li2::before {
+                                content: "";
+                                background-image: url(../assets/icons/clock.png);
+                                @extend %icon-before;
+                            }
+
+                            .info-li3::before {
+                                content: "";
+                                background-image: url(../assets/icons/letter.png);
+                                @extend %icon-before;
+                                width: 22.34px;
+                            }
+                            .info-li4::before {
+                                content: "";
+                                background-image: url(../assets/icons/placeholder.png);
+                                @extend %icon-before;
+                            }
+                        }
+                    }
+
+                    nav {
+                        // outline: 1px solid #2d1454;
+                        ul {
+                            display: flex;
+                            padding-left: 0;
+                            width: 665px;
+                            justify-content: space-between;
+                            li {
+                                list-style: none;
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 14px;
+                                line-height: 17px;
+                                letter-spacing: 0.1em;
+                                text-transform: uppercase;
+
+                                padding: 5px;
+                                a {
+                                    text-decoration: none;
+                                    color: #222222;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .bg-first-screen {
+            max-width: 1920px;
+            background-image: url(../assets/img/Rectangle.png);
+            background-repeat: no-repeat;
+            background-size:cover;
+            height: 670px;
+
+            .first-screen-content {
+                h1 {
+                    font-family: 'Merriweather';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 66px;
+                    color: #FFFFFF;
+                }
+
+                button {
+                    width: 270px;
+                    height: 60px;
+                    background: #005FA3;
+
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+            }
+
+            .slider{
+                .slider-controls {
+                    display: flex;
+                    width: 160px;
+                    justify-content: space-between;
+                }
+                .slider-btns {
+                   button {
+                       background: transparent;
+                       border: none;
+                       width: 60px;
+                       height: 60px;
+                   }
+
+                   .left-btn {
+                       background-color: #FFFFFF;
+                       opacity: 0.2;
+                   }
+
+                   .right-btn {
+                    background-color: #FFFFFF;
+                    opacity: 0.4;
+                }
+                }
+            }
+        }
+    }
+}

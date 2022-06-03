@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body .wrap-container header .header-container .info .top-info ul .info-li1::before, body .wrap-container header .header-container .info .top-info ul .info-li2::before, body .wrap-container header .header-container .info .top-info ul .info-li3::before, body .wrap-container header .header-container .info .top-info ul .info-li4::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+
+body .wrap-container {
+  outline: 1px solid green;
+  max-width: 1920px;
+  height: 100vmax;
+  margin: 0 auto;
+}
+body .wrap-container header {
+  width: 100%;
+}
+body .wrap-container header .header-container {
+  max-width: 1116px;
+  height: 110px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+body .wrap-container header .header-container .logo img {
+  padding-left: 12px;
+}
+body .wrap-container header .header-container .logo span {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 50px;
+  color: #005FA3;
+  padding-left: 24px;
+}
+body .wrap-container header .header-container .info {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: space-evenly;
+}
+body .wrap-container header .header-container .info .top-info ul {
+  display: flex;
+  padding-left: 0;
+  width: 665px;
+  justify-content: space-between;
+}
+body .wrap-container header .header-container .info .top-info ul li {
+  vertical-align: middle;
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #000000;
+}
+body .wrap-container header .header-container .info .top-info ul li span {
+  padding-left: 8px;
+}
+body .wrap-container header .header-container .info .top-info ul .info-li1::before {
+  content: "";
+  background-image: url(../assets/icons/phone.png);
+  width: 10px;
+}
+body .wrap-container header .header-container .info .top-info ul .info-li2::before {
+  content: "";
+  background-image: url(../assets/icons/clock.png);
+}
+body .wrap-container header .header-container .info .top-info ul .info-li3::before {
+  content: "";
+  background-image: url(../assets/icons/letter.png);
+  width: 22.34px;
+}
+body .wrap-container header .header-container .info .top-info ul .info-li4::before {
+  content: "";
+  background-image: url(../assets/icons/placeholder.png);
+}
+body .wrap-container header .header-container .info nav ul {
+  display: flex;
+  padding-left: 0;
+  width: 665px;
+  justify-content: space-between;
+}
+body .wrap-container header .header-container .info nav ul li {
+  list-style: none;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px;
+}
+body .wrap-container header .header-container .info nav ul li a {
+  text-decoration: none;
+  color: #222222;
+}
+body .wrap-container .bg-first-screen {
+  max-width: 1920px;
+  background-image: url(../assets/img/Rectangle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 670px;
+}
+body .wrap-container .bg-first-screen .first-screen-content h1 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 66px;
+  color: #FFFFFF;
+}
+body .wrap-container .bg-first-screen .first-screen-content button {
+  width: 270px;
+  height: 60px;
+  background: #005FA3;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
+body .wrap-container .bg-first-screen .slider .slider-controls {
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+}
+body .wrap-container .bg-first-screen .slider .slider-btns button {
+  background: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+}
+body .wrap-container .bg-first-screen .slider .slider-btns .left-btn {
+  background-color: #FFFFFF;
+  opacity: 0.2;
+}
+body .wrap-container .bg-first-screen .slider .slider-btns .right-btn {
+  background-color: #FFFFFF;
+  opacity: 0.4;
+}
+
+/*# sourceMappingURL=style.css.map */
