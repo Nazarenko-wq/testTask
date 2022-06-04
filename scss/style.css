@@ -13,7 +13,13 @@ body .wrap-container header .header-container .info .top-info ul .info-li1::befo
   vertical-align: middle;
 }
 
-body .wrap-container .bg-our-services .our-services .services-tittle h1, body .wrap-container .bg-about-us .about-us .about-us-content h1 {
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question::before, body .wrap-container .bg-faq .faq .faq-content .questions .second-question::before, body .wrap-container .bg-faq .faq .faq-content .questions .third-question::before {
+  content: "+";
+  width: 17px;
+  height: 10px;
+}
+
+body .wrap-container .bg-our-services .our-services .services-tittle h1, body .wrap-container .bg-about-us .about-us .about-us-content h1, body .wrap-container .bg-gallery .wrap-gallery h1, body .wrap-container .bg-faq .faq .faq-content h1 {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 900;
@@ -22,13 +28,23 @@ body .wrap-container .bg-our-services .our-services .services-tittle h1, body .w
   color: #333333;
 }
 
-body .wrap-container .bg-our-services .our-services .services-tittle h2, body .wrap-container .bg-our-services .our-services .our-services-gallery .card h2, body .wrap-container .bg-about-us .about-us .about-us-content h2 {
+body .wrap-container .bg-our-services .our-services .services-tittle h2, body .wrap-container .bg-our-services .our-services .our-services-gallery .card h2, body .wrap-container .bg-about-us .about-us .about-us-content h2, body .wrap-container .bg-faq .faq .faq-content h2 {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 33px;
   color: #BDBDBD;
+}
+
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3, body .wrap-container .bg-faq .faq .faq-content .questions .second-question h3, body .wrap-container .bg-faq .faq .faq-content .questions .third-question h3 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 body .wrap-container {
@@ -420,6 +436,153 @@ body .wrap-container .bg-about-us .about-us .about-us-cards .about-us-card p {
     flex-direction: column;
     align-items: center;
   }
+}
+body .wrap-container .bg-gallery {
+  max-width: 1920px;
+  background: #EBEBEB;
+}
+body .wrap-container .bg-gallery .wrap-gallery {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  height: 794px;
+  padding-top: 139px;
+  display: flex;
+  flex-direction: column;
+}
+body .wrap-container .bg-gallery .wrap-gallery h1 {
+  padding-left: 13px;
+  padding-bottom: 56px;
+}
+@media (max-width: 580px) {
+  body .wrap-container .bg-gallery .wrap-gallery h1 {
+    font-size: 24px;
+  }
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 2.7vw);
+  gap: 15px;
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 607px) {
+  body .wrap-container .bg-gallery .wrap-gallery .gallery figure {
+    width: 70%;
+    height: 200px;
+  }
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery .first {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery .second {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery .third {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery .fourth {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 9;
+}
+@media (max-width: 1440px) {
+  body .wrap-container .bg-gallery .wrap-gallery .gallery {
+    grid-template-rows: repeat(8, 5vw);
+  }
+}
+@media (max-width: 607px) {
+  body .wrap-container .bg-gallery .wrap-gallery .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1167px) {
+  body .wrap-container .bg-gallery .wrap-gallery {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 1167px) {
+  body .wrap-container .bg-gallery .wrap-gallery {
+    margin-top: 300px;
+  }
+}
+@media (max-width: 607px) {
+  body .wrap-container .bg-gallery .wrap-gallery {
+    margin-top: 830px;
+    padding-top: 20px;
+    height: 1000px;
+  }
+}
+@media (max-width: 500px) {
+  body .wrap-container .bg-gallery .wrap-gallery {
+    margin-top: 1000px;
+    padding-top: 20px;
+  }
+}
+body .wrap-container .bg-faq {
+  max-width: 1920px;
+}
+body .wrap-container .bg-faq .faq {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  outline: 1px solid red;
+  display: flex;
+  padding-top: 116px;
+}
+body .wrap-container .bg-faq .faq .faq-content h2 {
+  padding-bottom: 27px;
+  padding-left: 10px;
+}
+body .wrap-container .bg-faq .faq .faq-content h1 {
+  padding-left: 10px;
+  padding-bottom: 44px;
+}
+body .wrap-container .bg-faq .faq .faq-content h1 span {
+  color: #3e3e8b;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions {
+  max-width: 730px;
+  width: 100%;
+  padding-left: 10px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question {
+  background: #005FA3;
+  color: #FFFFFF;
+  height: 208px;
+  padding-left: 30px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 138%;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question::before {
+  content: "-";
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .second-question {
+  background: #EBEBEB;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .third-question {
+  background: #EBEBEB;
 }
 
 /*# sourceMappingURL=style.css.map */
