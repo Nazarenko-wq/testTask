@@ -30,22 +30,39 @@
                         </div>
                         <nav>
                             <ul>
-                                <li><a href="#">главная</a></li>
-                                <li><a href="#">услуги</a></li>
-                                <li><a href="#">кейсы</a></li>
-                                <li><a href="#">о компании</a></li>
-                                <li><a href="#">контакты</a></li>
+                                <li><a href="#main">главная</a></li>
+                                <li><a href="#servicse">услуги</a></li>
+                                <li><a href="#about">кейсы</a></li>
+                                <li><a href="#about">о компании</a></li>
+                                <li><a href="#contacts">контакты</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="burger">
                         <img src="./assets/icons/Burger.png" alt="burgerMenu">
                     </div>
+                    <!-- Hide burger menu -->
+                    <div class="burger-list">
+                        <div class="burger-header">
+                            <div class="burger2">
+                                <img src="./assets/icons/Burger.png" alt="burgerMenu">
+                            </div>
+                        </div>
+                        <div class="burger-menu">
+                            <ul>
+                                <li><a href="#main">главная</a></li>
+                                <li><a href="#servicse">услуги</a></li>
+                                <li><a href="#about">кейсы</a></li>
+                                <li><a href="#about">о компании</a></li>
+                                <li><a href="#contacts">контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </header>
         </div>
         <main>
-            <div class="bg-first-screen">
+            <div class="bg-first-screen" id="main">
                 <section class="first-screen">
                     <div class="first-screen-content">
                         <h1>Бухгалтерские услуги<br>
@@ -76,7 +93,7 @@
                 </section>
             </div>
             <div class="bg-our-services">
-                <section class="our-services">
+                <section class="our-services" id="servicse">
                     <div class="services-tittle">
                         <h2>Наши услуги</h2>
                         <h1>Мы специализируемся</h1>
@@ -116,7 +133,7 @@
                 </section>
             </div>
             <div class="bg-about-us">
-                <section class="about-us">
+                <section class="about-us" id="about">
                     <div class="about-us-content">
                         <h2>О нас</h2>
                         <h1>Компания <span>ИвановПром</span></h1>
@@ -190,7 +207,7 @@
                 </section>
             </div>
             <div class="bg-contact">
-                <section class="contact">
+                <section class="contact" id="contacts">
                     <div class="top-block">
                         <div class="contacts-block">
                             <h1>Связь с нами</h1>
@@ -219,10 +236,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map"></div>
+                    <div class="map">
+                        <img src="./assets/img/map.png" alt="map">
+                    </div>
                 </section>
             </div>
         </main>
+        <footer>
+            <div class="bg-footer">
+                <div class="foooter-content">
+                    <div class="cop">
+                        <p>2019 (с) Все права защищены. БухОне.ру</p>
+                    </div>
+                    <div class="created">
+                        <p>Разработано: BuhOne</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="./index.js"></script>
