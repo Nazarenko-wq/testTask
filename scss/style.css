@@ -894,6 +894,7 @@ body .modal-container .modal-body {
   flex-direction: column;
   box-sizing: border-box;
   padding-left: 94px;
+  margin: 20px;
 }
 body .modal-container .modal-body .datas {
   max-width: 540px;
@@ -909,6 +910,11 @@ body .modal-container .modal-body .datas .modal-tittle {
   padding-top: 31px;
   letter-spacing: 0.07em;
   padding-bottom: 64px;
+}
+@media (max-width: 580px) {
+  body .modal-container .modal-body .datas .modal-tittle {
+    font-size: 20px;
+  }
 }
 body .modal-container .modal-body .datas .nameAndSurname {
   display: flex;
@@ -934,6 +940,11 @@ body .modal-container .modal-body .datas .nameAndSurname .surname input {
 body .modal-container .modal-body .datas .nameAndSurname .surname p {
   padding-bottom: 16px;
 }
+@media (max-width: 768px) {
+  body .modal-container .modal-body .datas .nameAndSurname {
+    flex-direction: column;
+  }
+}
 body .modal-container .modal-body .datas .message textarea {
   border: none;
   border-bottom: 2px solid gray;
@@ -947,14 +958,60 @@ body .modal-container .modal-body .datas .message input[type=submit] {
   margin-top: 19px;
   margin-bottom: 40px;
 }
+@media (max-width: 580px) {
+  body .modal-container .modal-body .datas .message input[type=submit] {
+    margin-right: auto;
+  }
+}
 body .modal-container .modal-body .close-icon {
   position: absolute;
   right: 20px;
   top: 15px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  body .modal-container .modal-body {
+    height: auto;
+    padding-left: 20px;
+  }
+}
 body .modal-display {
   display: flex;
+}
+body .gallery-scope {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(41, 41, 41, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+body .gallery-scope .scope-container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+body .gallery-scope .scope-container .gallery-close-icon {
+  position: absolute;
+  right: 10px;
+  top: -55px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  color: white;
+  font-size: 48px;
+}
+body .gallery-scope .scope-container .img-container {
+  width: 100%;
+  height: auto;
+}
+body .gallery-scope .scope-container .img-container img {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

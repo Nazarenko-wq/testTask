@@ -20,16 +20,16 @@
 })();
 
 // gallery
-;(function(){
-    let gallery = document.querySelector('.gallery');
+// ;(function(){
+//     let gallery = document.querySelector('.gallery');
 
-    gallery.addEventListener('click', function (event) {
-        if(event.target.matches('img')) {
-            this.style.backgroundColor = 'red';
+//     gallery.addEventListener('click', function (event) {
+//         if(event.target.matches('img')) {
+//             this.style.backgroundColor = 'red';
 
-        }
-    })
-})();
+//         }
+//     })
+// })();
 
 // modal window
 ;(function(){
@@ -45,4 +45,29 @@
     closeIcon.addEventListener('click', function () {
         modalContainer.classList.remove('modal-display');
     })
+})();
+
+
+// Gallery scope
+;(function(){
+    let closeIcon = document.querySelector('.gallery-close-icon');
+    let galleryScope = document.querySelector('.gallery-scope');
+
+    closeIcon.addEventListener('click', function () {
+
+        galleryScope.style.display = 'none';
+    })
+
+    let gallery = document.querySelector('.gallery');
+    let currentImg = document.querySelector('.current-img');
+
+    gallery.addEventListener('click', function (event) {
+        if(event.target.matches('img')) {
+            galleryScope.style.display = 'flex';
+            currentImg.src = event.target.src;
+            // this.style.backgroundColor = 'red';
+
+        }
+    })
+
 })();
