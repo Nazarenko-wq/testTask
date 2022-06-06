@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@300;400;700;900&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="dark-bg"></div>
     <div class="wrap-container">
         <div class="bg-header">
             <header>
@@ -39,7 +40,7 @@
                         </nav>
                     </div>
                     <div class="burger">
-                        <img src="./assets/icons/Burger.png" alt="burgerMenu">
+                        <img class="burgerIcon" src="./assets/icons/Burger.png" alt="burgerMenu">
                     </div>
                     <!-- Hide burger menu -->
                     <div class="burger-list">
@@ -256,6 +257,34 @@
         </footer>
     </div>
 
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="datas">
+                <div class="modal-tittle">
+                    <h1>Связь с нами</h1>
+                </div>
+                <div class="nameAndSurname">
+                    <div class="name">
+                        <p>Имя</p>
+                        <input type="text" placeholder=" Иван">
+                    </div>
+                    <div class="surname">
+                        <p>Фамилия</p>
+                        <input type="text" placeholder=" Иванов">
+                    </div>
+                </div>
+                <div class="message">
+                    <p>Сообщение</p>
+                    <textarea  id="text" cols="30" rows="5" placeholder="Ваше сообщение"></textarea>
+                    <input class="modal-btn" type="submit" value="Отправить сообщение">
+                </div>
+            </div>
+            <div class="close-icon">
+                <img src="./assets/icons/closeIcon.png" alt="close">
+            </div>
+        </div>
+    </div>
+    
     <script src="./index.js"></script>
 </body>
 </html>

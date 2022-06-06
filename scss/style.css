@@ -17,7 +17,7 @@ body .wrap-container header .header-container .info .top-info ul .info-li1::befo
   vertical-align: middle;
 }
 
-body .wrap-container .bg-first-screen .first-screen .first-screen-content button, body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit] {
+body .wrap-container .bg-first-screen .first-screen .first-screen-content button, body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit], body .modal-container .modal-body .datas .message input[type=submit] {
   width: 270px;
   height: 60px;
   background: #005FA3;
@@ -29,7 +29,7 @@ body .wrap-container .bg-first-screen .first-screen .first-screen-content button
   text-align: center;
   color: #FFFFFF;
 }
-body .wrap-container .bg-first-screen .first-screen .first-screen-content button:hover, body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit]:hover {
+body .wrap-container .bg-first-screen .first-screen .first-screen-content button:hover, body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit]:hover, body .modal-container .modal-body .datas .message input[type=submit]:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition: all 0.5s;
@@ -71,7 +71,7 @@ body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3, bo
   text-transform: uppercase;
 }
 
-body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=text], body .wrap-container .bg-contact .contact .top-block .user-data .forms form textarea {
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=text], body .wrap-container .bg-contact .contact .top-block .user-data .forms form textarea, body .modal-container .modal-body .datas .nameAndSurname .name input, body .modal-container .modal-body .datas .nameAndSurname .surname input, body .modal-container .modal-body .datas .message textarea {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
@@ -80,7 +80,7 @@ body .wrap-container .bg-contact .contact .top-block .user-data .forms form inpu
   color: #BDBDBD;
 }
 
-body .wrap-container .bg-contact .contact .top-block .user-data p span, body .wrap-container .bg-contact .contact .top-block .user-data .forms form p {
+body .wrap-container .bg-contact .contact .top-block .user-data p span, body .wrap-container .bg-contact .contact .top-block .user-data .forms form p, body .modal-container .modal-body .datas .nameAndSurname .name, body .modal-container .modal-body .datas .nameAndSurname .surname, body .modal-container .modal-body .datas .message {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -192,7 +192,7 @@ body .wrap-container header .header-container .burger-list {
   height: 723px;
   background-color: #292929;
   position: fixed;
-  right: 0px;
+  right: -2000px;
   top: 0px;
 }
 body .wrap-container header .header-container .burger-list .burger-header {
@@ -206,9 +206,6 @@ body .wrap-container header .header-container .burger-list .burger-header {
 }
 body .wrap-container header .header-container .burger-list .burger2 {
   margin-left: auto;
-}
-body .wrap-container header .header-container .burger-list .burger2 img {
-  transform: rotate(90deg);
 }
 body .wrap-container header .header-container .burger-list .burger2 img:hover {
   cursor: pointer;
@@ -241,6 +238,15 @@ body .wrap-container header .header-container .burger-list .burger-menu ul li a:
 body .wrap-container header .header-container .burger-list .burger-menu ul .activ-link {
   border-bottom: 3px solid #F1CDB3;
   padding-bottom: 4px;
+}
+body .wrap-container header .header-container .active-burger-list {
+  right: 0px;
+  transition: all 1s;
+  z-index: 10;
+}
+body .wrap-container header .header-container .slide-right {
+  right: -2000px;
+  transition: all 2s;
 }
 @media (max-width: 920px) {
   body .wrap-container header .header-container .info {
@@ -542,6 +548,9 @@ body .wrap-container .bg-gallery .wrap-gallery .gallery {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 2.7vw);
   gap: 15px;
+}
+body .wrap-container .bg-gallery .wrap-gallery .gallery figure {
+  cursor: pointer;
 }
 body .wrap-container .bg-gallery .wrap-gallery .gallery figure img {
   width: 100%;
@@ -863,6 +872,89 @@ body .wrap-container footer .foooter-content {
 }
 body .wrap-container footer .foooter-content div {
   margin: 40px -10px 40px 10px;
+}
+body .modal-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(41, 41, 41, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+body .modal-container .modal-body {
+  position: relative;
+  max-width: 730px;
+  width: 100%;
+  height: 552px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 94px;
+}
+body .modal-container .modal-body .datas {
+  max-width: 540px;
+  width: 100%;
+}
+body .modal-container .modal-body .datas .modal-tittle {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 23px;
+  line-height: 69px;
+  color: #222222;
+  padding-top: 31px;
+  letter-spacing: 0.07em;
+  padding-bottom: 64px;
+}
+body .modal-container .modal-body .datas .nameAndSurname {
+  display: flex;
+  padding-bottom: 37px;
+}
+body .modal-container .modal-body .datas .nameAndSurname .name {
+  width: 53%;
+}
+body .modal-container .modal-body .datas .nameAndSurname .name input {
+  border: none;
+  border-bottom: 2px solid gray;
+}
+body .modal-container .modal-body .datas .nameAndSurname .name p {
+  padding-bottom: 16px;
+}
+body .modal-container .modal-body .datas .nameAndSurname .surname {
+  width: 45%;
+}
+body .modal-container .modal-body .datas .nameAndSurname .surname input {
+  border: none;
+  border-bottom: 2px solid gray;
+}
+body .modal-container .modal-body .datas .nameAndSurname .surname p {
+  padding-bottom: 16px;
+}
+body .modal-container .modal-body .datas .message textarea {
+  border: none;
+  border-bottom: 2px solid gray;
+  resize: none;
+  display: block;
+  width: 90%;
+}
+body .modal-container .modal-body .datas .message input[type=submit] {
+  display: block;
+  margin-left: auto;
+  margin-top: 19px;
+  margin-bottom: 40px;
+}
+body .modal-container .modal-body .close-icon {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+body .modal-display {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
