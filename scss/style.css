@@ -13,6 +13,24 @@ body .wrap-container header .header-container .info .top-info ul .info-li1::befo
   vertical-align: middle;
 }
 
+body .wrap-container .bg-first-screen .first-screen .first-screen-content button, body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit] {
+  width: 270px;
+  height: 60px;
+  background: #005FA3;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
+body .wrap-container .bg-first-screen .first-screen .first-screen-content button:hover, body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit]:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
 body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3 span::before, body .wrap-container .bg-faq .faq .faq-content .questions .second-question h3 span::before, body .wrap-container .bg-faq .faq .faq-content .questions .third-question h3 span::before {
   content: "+";
   width: 17px;
@@ -21,7 +39,7 @@ body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3 spa
   vertical-align: middle;
 }
 
-body .wrap-container .bg-our-services .our-services .services-tittle h1, body .wrap-container .bg-about-us .about-us .about-us-content h1, body .wrap-container .bg-gallery .wrap-gallery h1, body .wrap-container .bg-faq .faq .faq-content h1 {
+body .wrap-container .bg-our-services .our-services .services-tittle h1, body .wrap-container .bg-about-us .about-us .about-us-content h1, body .wrap-container .bg-gallery .wrap-gallery h1, body .wrap-container .bg-faq .faq .faq-content h1, body .wrap-container .bg-contact .contact .top-block .contacts-block h1 {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 900;
@@ -47,6 +65,23 @@ body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3, bo
   line-height: 17px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=text], body .wrap-container .bg-contact .contact .top-block .user-data .forms form textarea {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 29px;
+  color: #BDBDBD;
+}
+
+body .wrap-container .bg-contact .contact .top-block .user-data p span, body .wrap-container .bg-contact .contact .top-block .user-data .forms form p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
 }
 
 body .wrap-container {
@@ -189,23 +224,6 @@ body .wrap-container .bg-first-screen .first-screen .first-screen-content h1 {
   line-height: 66px;
   color: #FFFFFF;
   margin-bottom: 68px;
-}
-body .wrap-container .bg-first-screen .first-screen .first-screen-content button {
-  width: 270px;
-  height: 60px;
-  background: #005FA3;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #FFFFFF;
-}
-body .wrap-container .bg-first-screen .first-screen .first-screen-content button:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-  transition: all 0.5s;
 }
 @media (max-width: 600px) {
   body .wrap-container .bg-first-screen .first-screen .first-screen-content {
@@ -629,6 +647,106 @@ body .wrap-container .bg-faq .faq .faq-img {
     gap: 10px;
     align-items: center;
   }
+}
+body .wrap-container .bg-contact {
+  max-width: 1920px;
+  width: 100%;
+  background: url(../assets/img/contactBg.png);
+  background-repeat: repeat;
+  background-size: cover;
+  color: white;
+}
+body .wrap-container .bg-contact .contact {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 116px 0 130px 10px;
+}
+body .wrap-container .bg-contact .contact .top-block {
+  display: flex;
+  justify-content: space-between;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block {
+  width: 42%;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block h1 {
+  color: white;
+  padding-bottom: 40px;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  padding-bottom: 75px;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone {
+  display: flex;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone .phone-number {
+  display: flex;
+  margin-right: 54px;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone .phone-number img {
+  padding-right: 17px;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone .phone-number a {
+  color: white;
+  text-decoration: none;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone .mail {
+  display: flex;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone .mail img {
+  padding-right: 18px;
+}
+body .wrap-container .bg-contact .contact .top-block .contacts-block .phone .mail a {
+  color: white;
+  text-decoration: none;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data {
+  padding-top: 18px;
+  width: 48%;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data p {
+  padding-bottom: 5px;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data p .name-span {
+  margin-right: 248px;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form p {
+  padding-top: 44px;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=text] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form textarea {
+  background: transparent;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  display: block;
+  width: 100%;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form input[type=submit] {
+  display: block;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+body .wrap-container .bg-contact .contact .top-block .user-data .forms form .firstInp {
+  margin-right: 69px;
+}
+body .wrap-container .bg-contact .contact .map {
+  background-image: url(../assets/img/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 360px;
 }
 
 /*# sourceMappingURL=style.css.map */

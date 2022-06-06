@@ -13,6 +13,25 @@
     vertical-align: middle;
 }
 
+%btn-content {
+    width: 270px;
+    height: 60px;
+    background: #005FA3;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: all 0.5s;
+    }
+}
+
 %faq-before {
     content: "+";
     width: 17px;
@@ -47,6 +66,23 @@
     line-height: 17px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+%placeholderText {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 29px;
+    color: #BDBDBD;
+}
+
+%surname {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
 }
 
 body {
@@ -216,23 +252,7 @@ body {
                     }
     
                     button {
-                        width: 270px;
-                        height: 60px;
-                        background: #005FA3;
-    
-                        font-family: 'Lato';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 18px;
-                        line-height: 25px;
-                        text-align: center;
-                        color: #FFFFFF;
-
-                        &:hover {
-                            cursor: pointer;
-                            transform: scale(1.2);
-                            transition: all 0.5s;
-                        }
+                        @extend %btn-content;
                     }
                     @media (max-width: 600px) {
                         justify-content: center;
@@ -704,6 +724,135 @@ body {
                     flex-direction: column;
                     gap: 10px;
                     align-items: center;
+                }
+            }
+        }
+
+        .bg-contact {
+            max-width: 1920px;
+            width: 100%;
+            background: url(../assets/img/contactBg.png);
+            background-repeat: repeat;
+            background-size: cover;
+            color: white;
+            .contact {
+                max-width: 1110px;
+                width: 100%;
+                margin: 0 auto;
+                // outline: 1px solid red;
+                box-sizing: border-box;
+                padding: 116px 0 130px 10px;
+
+                .top-block {
+                    display: flex;
+                    justify-content: space-between;
+                    .contacts-block {
+                        width: 42%;
+                        h1 {
+                            @extend %tittleh1-text;
+                            color: white;
+                            padding-bottom: 40px;
+                        }
+
+                        p {
+                            font-family: 'Lato';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 19px;
+                            line-height: 25px;
+                            letter-spacing: 0.01em;
+                            padding-bottom: 75px;
+                        }
+
+                        .phone {
+                            display: flex;
+
+                            .phone-number {
+                                display: flex;
+                                margin-right: 54px;
+                                img {
+                                    padding-right: 17px;
+                                }
+
+                                a {
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                            }
+
+                            .mail {
+                                display: flex;
+                                img {
+                                    padding-right: 18px;
+                                }
+
+                                a {
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .user-data {
+                        padding-top: 18px;
+                        width: 48%;
+                        p {
+                            padding-bottom: 5px;
+                            span {
+                                @extend %surname;
+                            }
+                            .name-span {
+                                margin-right: 248px;
+                            }
+                        }
+
+                        .forms {
+                            form {
+                                p {
+                                    @extend %surname;
+                                    padding-top: 44px;
+                                }
+
+                                input[type=text] {
+                                    background: transparent;
+                                    border: none;
+                                    border-bottom: 1px solid gray;
+                                    @extend %placeholderText;
+                                
+                                }
+
+                                textarea {
+                                    background: transparent;
+                                    resize: none;
+                                    border: none;
+                                    border-bottom: 1px solid gray;
+                                    @extend %placeholderText;
+                                    display: block;
+                                    width: 100%
+                                }
+
+                                input[type=submit] {
+                                    @extend %btn-content;
+                                    display: block;
+                                    margin-left: auto;
+                                    margin-top: 10px;
+                                    margin-bottom: 40px;
+                                }
+
+                                .firstInp {
+                                    margin-right: 69px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .map {
+                    background-image: url(../assets/img/map.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    height: 360px;
                 }
             }
         }
