@@ -13,10 +13,12 @@ body .wrap-container header .header-container .info .top-info ul .info-li1::befo
   vertical-align: middle;
 }
 
-body .wrap-container .bg-faq .faq .faq-content .questions .first-question::before, body .wrap-container .bg-faq .faq .faq-content .questions .second-question::before, body .wrap-container .bg-faq .faq .faq-content .questions .third-question::before {
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3 span::before, body .wrap-container .bg-faq .faq .faq-content .questions .second-question h3 span::before, body .wrap-container .bg-faq .faq .faq-content .questions .third-question h3 span::before {
   content: "+";
   width: 17px;
   height: 10px;
+  font-size: 32px;
+  vertical-align: middle;
 }
 
 body .wrap-container .bg-our-services .our-services .services-tittle h1, body .wrap-container .bg-about-us .about-us .about-us-content h1, body .wrap-container .bg-gallery .wrap-gallery h1, body .wrap-container .bg-faq .faq .faq-content h1 {
@@ -542,7 +544,6 @@ body .wrap-container .bg-faq .faq {
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
-  outline: 1px solid red;
   display: flex;
   padding-top: 116px;
 }
@@ -557,6 +558,11 @@ body .wrap-container .bg-faq .faq .faq-content h1 {
 body .wrap-container .bg-faq .faq .faq-content h1 span {
   color: #3e3e8b;
 }
+@media (max-width: 580px) {
+  body .wrap-container .bg-faq .faq .faq-content h1 {
+    font-size: 24px;
+  }
+}
 body .wrap-container .bg-faq .faq .faq-content .questions {
   max-width: 730px;
   width: 100%;
@@ -565,8 +571,17 @@ body .wrap-container .bg-faq .faq .faq-content .questions {
 body .wrap-container .bg-faq .faq .faq-content .questions .first-question {
   background: #005FA3;
   color: #FFFFFF;
-  height: 208px;
   padding-left: 30px;
+  padding-bottom: 30px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3 {
+  padding-top: 32px;
+  padding-bottom: 17px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .first-question h3 span::before {
+  content: "-";
+  vertical-align: text-bottom;
+  padding-right: 18px;
 }
 body .wrap-container .bg-faq .faq .faq-content .questions .first-question p {
   font-family: 'Lato';
@@ -575,14 +590,45 @@ body .wrap-container .bg-faq .faq .faq-content .questions .first-question p {
   font-size: 16px;
   line-height: 138%;
 }
-body .wrap-container .bg-faq .faq .faq-content .questions .first-question::before {
-  content: "-";
-}
 body .wrap-container .bg-faq .faq .faq-content .questions .second-question {
   background: #EBEBEB;
+  height: 77px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .second-question h3 {
+  padding-top: 31px;
+  padding-left: 26px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .second-question h3 span::before {
+  content: "+";
+  padding-right: 14px;
 }
 body .wrap-container .bg-faq .faq .faq-content .questions .third-question {
   background: #EBEBEB;
+  height: 77px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .third-question h3 {
+  padding-top: 31px;
+  padding-left: 26px;
+}
+body .wrap-container .bg-faq .faq .faq-content .questions .third-question h3 span::before {
+  content: "+";
+  padding-right: 14px;
+}
+@media (max-width: 800px) {
+  body .wrap-container .bg-faq .faq .faq-content .questions {
+    width: 90%;
+    margin: auto;
+  }
+}
+body .wrap-container .bg-faq .faq .faq-img {
+  margin-left: 20px;
+}
+@media (max-width: 1000px) {
+  body .wrap-container .bg-faq .faq {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,6 +17,8 @@
     content: "+";
     width: 17px;
     height: 10px;
+    font-size: 32px;
+    vertical-align: middle;
 }
 
 %tittleh1-text {
@@ -597,7 +599,7 @@ body {
                 max-width: 1110px;
                 width: 100%;
                 margin: 0 auto;
-                outline: 1px solid red;
+                // outline: 1px solid red;
                 display: flex;
                 padding-top: 116px;
 
@@ -615,6 +617,10 @@ body {
                         span {
                             color: #3e3e8b;
                         }
+                        
+                        @media (max-width: 580px) {
+                            font-size: 24px;
+                        }
                     }
 
                     .questions {
@@ -624,10 +630,20 @@ body {
                         .first-question {
                             background: #005FA3;
                             color: #FFFFFF;
-                            height: 208px;
                             padding-left: 30px;
+                            padding-bottom: 30px;
                             h3 {
                                 @extend %faq-span;
+                                padding-top: 32px;
+                                padding-bottom: 17px;
+                                span {
+                                    &::before {
+                                        @extend %faq-before;
+                                        content: "-";
+                                        vertical-align: text-bottom;
+                                        padding-right: 18px;
+                                    }
+                                }
                             }
                             p {
                                 font-family: 'Lato';
@@ -636,34 +652,58 @@ body {
                                 font-size: 16px;
                                 line-height: 138%;
                             }
-
-                            &::before {
-                                @extend %faq-before;
-                                content: "-";
-                            }
                         }
 
                         .second-question {
                             background: #EBEBEB;
+                            height: 77px;
                             h3 {
                                 @extend %faq-span;
-                            }
+                                padding-top: 31px;
+                                padding-left: 26px;
 
-                            &::before {
-                                @extend %faq-before;
+                                span {
+                                    &::before {
+                                        @extend %faq-before;
+                                        content: "+";
+                                        padding-right: 14px;
+                                    }
+                                }
                             }
                         }
 
                         .third-question {
                             background: #EBEBEB;
+                            height: 77px;
                             h3 {
                                 @extend %faq-span;
-                            }
-                            &::before {
-                                @extend %faq-before;
+                                padding-top: 31px;
+                                padding-left: 26px;
+
+                                span {
+                                    &::before {
+                                        @extend %faq-before;
+                                        content: "+";
+                                        padding-right: 14px;
+                                    }
+                                }
                             }
                         }
+
+                        @media (max-width: 800px) {
+                            width: 90%;
+                            margin: auto;
+                        }
                     }
+                }
+                
+                .faq-img {
+                    margin-left: 20px;
+                }
+                @media (max-width: 1000px) {
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: center;
                 }
             }
         }
