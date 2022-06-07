@@ -17,19 +17,15 @@
         burgerList.classList.add('slide-right');
     })
 
+    let parent = document.querySelector('.parent-list');
+
+    parent.addEventListener('click', function (event) {
+        if(event.target.matches('a')) {
+            burgerList.classList.add('slide-right');
+        }        
+    })
+
 })();
-
-// gallery
-// ;(function(){
-//     let gallery = document.querySelector('.gallery');
-
-//     gallery.addEventListener('click', function (event) {
-//         if(event.target.matches('img')) {
-//             this.style.backgroundColor = 'red';
-
-//         }
-//     })
-// })();
 
 // modal window
 ;(function(){
@@ -70,4 +66,18 @@
         }
     })
 
+})();
+
+// add yandex map
+;(function(){
+
+
+    function init () {
+        let map = new ymaps.Map('map', {
+            center: [52.421180901028,31.019892651245094],
+            zoom: 16
+        });
+    }
+
+    ymaps.ready(init);
 })();
